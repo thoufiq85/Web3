@@ -2,7 +2,8 @@
 pragma solidity ^0.8.0;
 
 contract MyContract {
-  function getName(string memory name) public pure returns (string memory) {
+    string public name="Tofiq";
+  function getName() public view returns (string memory) {
     return name;
   }
 }
