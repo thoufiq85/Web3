@@ -48,7 +48,7 @@ const button = document.getElementById('myButton');
 
 const myFunction = () => {
 	    // Call the Solidity function
-	contract.methods.getbalance().call().then(function(result){
+	contract.methods.getName().call().then(function(result){
       // Update the result on the HTML page  
     document.getElementById('name').textContent = result;
   
