@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interacting with Solidity functions</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+
+   <style>
+
+body{
+	background-color: #047aed;
+}
+
+  </style>
+  </head>
+  <body>
+   
+<div>
+     <header> <h1> Solidity with Frontend Integration </h1> </header>
+		 <button id='myButton'> GetName </button>
+
+		 <span id='name'></span>
+
+
+</div>
+
+
+<script>
+   
+// Initialize web3 provider
+if (typeof web3 !== 'undefined') {
+  web3 = new Web3(web3.currentProvider);
+} else {
+  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+}
+
+// Set contract address and ABI
+const Address = '0x35e8E8232F2E30D374EcaAF481b34c4F94B4Ce74';
+const ABI =lk;
+
+// Initialize contract instance
+const contract = new web3.eth.Contract(ABI, Address);
+
+
+
+
+
+const button = document.getElementById('myButton');
+
+const myFunction = () => {
+	    // Call the Solidity function
+	contract.methods.getbalance().call().then(function(result){
+      // Update the result on the HTML page  
+    document.getElementById('name').textContent = result;
+  
+   });
+
+};
+
+button.addEventListener('click', myFunction);
+
+
+
+</script>
+    
+
+
+   
+  </body>
+</html>
