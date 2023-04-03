@@ -34,8 +34,35 @@ if (typeof web3 !== 'undefined') {
 }
 
 // Set contract address and ABI
-const Address = '0x35e8E8232F2E30D374EcaAF481b34c4F94B4Ce74';
-const ABI =lk;
+const Address = '0x1087fcA5C04Fb9e125fBeeFE671463469F8AB1aD';
+const ABI =[
+	{
+		"inputs": [],
+		"name": "getName",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
 
 // Initialize contract instance
 const contract = new web3.eth.Contract(ABI, Address);
@@ -57,6 +84,13 @@ const myFunction = () => {
 };
 
 button.addEventListener('click', myFunction);
+
+
+   
+
+  
+ 
+
 
 
 
